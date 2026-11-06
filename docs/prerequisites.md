@@ -29,3 +29,7 @@ Open PowerShell and run:
 ```bash
 node --version
 ```
+
+---
+
+[Continue: Verify Your Project →](local-build.md){ .md-button .md-button--primary }
