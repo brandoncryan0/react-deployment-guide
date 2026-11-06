@@ -1,0 +1,44 @@
+site_name: Deploying a React Website
+
+site_description: A beginner-friendly guide to publishing a React and Vite website with GitHub and Vercel.
+
+theme:
+  name: material
+
+  palette:
+    scheme: default
+    primary: custom
+    accent: custom
+
+  features:
+    - navigation.sections
+    - navigation.footer
+    - navigation.top
+    - toc.follow
+
+nav:
+  - Home: index.md
+  - Before You Begin: prerequisites.md
+  - Verify Your Project: local-build.md
+  - Set Up Git: git-setup.md
+  - Publish to GitHub: github.md
+  - Deploy with Vercel: vercel.md
+  - Verify the Deployment: verify-deployment.md
+  - Update Your Website: updating-site.md
+  - Add a Custom Domain: custom-domain.md
+  - Troubleshooting: troubleshooting.md
+  - Git Quick Reference: git-reference.md
+  - About This Guide: about-this-guide.md
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format

@@ -1,0 +1,332 @@
+:root {
+  --portfolio-bg: #f1efe9;
+  --portfolio-text: #171717;
+  --portfolio-muted: #69665f;
+  --portfolio-border: #c8c4ba;
+  --portfolio-border-dark: #aaa69d;
+  --portfolio-soft: #d9d5cb;
+
+  --md-primary-fg-color: #171717;
+  --md-primary-fg-color--light: #36332f;
+  --md-primary-fg-color--dark: #000000;
+
+  --md-accent-fg-color: #69665f;
+
+  --md-default-bg-color: #f1efe9;
+  --md-default-fg-color: #171717;
+  --md-default-fg-color--light: #514d47;
+  --md-default-fg-color--lighter: #77736c;
+}
+
+/* ---------------------------------------------------------
+   PAGE
+   --------------------------------------------------------- */
+
+body {
+  background: var(--portfolio-bg);
+
+  font-family: "Segoe UI", Arial, sans-serif;
+
+  color: var(--portfolio-text);
+}
+
+/* ---------------------------------------------------------
+   HEADER
+   --------------------------------------------------------- */
+
+.md-header {
+  background: var(--portfolio-bg);
+  color: var(--portfolio-text);
+
+  border-bottom: 1px solid var(--portfolio-border);
+
+  box-shadow: none;
+}
+
+.md-header__title {
+  font-size: 0.78rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.md-header__button {
+  color: var(--portfolio-text);
+}
+
+/* ---------------------------------------------------------
+   NAVIGATION
+   --------------------------------------------------------- */
+
+.md-sidebar {
+  background: var(--portfolio-bg);
+}
+
+.md-nav__title {
+  background: var(--portfolio-bg);
+  color: var(--portfolio-text);
+
+  font-size: 0.68rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.md-nav__link {
+  color: var(--portfolio-muted);
+
+  font-size: 0.76rem;
+
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.md-nav__link:hover {
+  color: var(--portfolio-text);
+}
+
+.md-nav__link--active {
+  color: var(--portfolio-text);
+
+  font-weight: 600;
+}
+
+/* ---------------------------------------------------------
+   CONTENT
+   --------------------------------------------------------- */
+
+.md-content {
+  background: var(--portfolio-bg);
+}
+
+.md-content__inner {
+  max-width: 850px;
+}
+
+.md-typeset {
+  color: #36332f;
+
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* ---------------------------------------------------------
+   HEADINGS
+   --------------------------------------------------------- */
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  font-family: "Segoe UI", Arial, sans-serif;
+
+  color: var(--portfolio-text);
+
+  font-weight: 600;
+}
+
+.md-typeset h1 {
+  margin-bottom: 1.2rem;
+
+  font-size: clamp(2.4rem, 4vw, 3.5rem);
+
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.md-typeset h2 {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+
+  border-top: 1px solid var(--portfolio-border);
+
+  font-size: 1.8rem;
+
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.md-typeset h3 {
+  margin-top: 2rem;
+
+  font-size: 1.3rem;
+  line-height: 1.3;
+}
+
+/* ---------------------------------------------------------
+   LINKS
+   --------------------------------------------------------- */
+
+.md-typeset a {
+  color: var(--portfolio-text);
+
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+
+  transition: opacity 0.2s ease;
+}
+
+.md-typeset a:hover {
+  color: var(--portfolio-text);
+
+  opacity: 0.55;
+}
+
+/* ---------------------------------------------------------
+   CODE
+   --------------------------------------------------------- */
+
+.md-typeset code {
+  border-radius: 0;
+
+  background: #e4e0d7;
+
+  color: var(--portfolio-text);
+}
+
+.md-typeset pre > code {
+  background: #171717;
+  color: #f1efe9;
+}
+
+.highlight {
+  border-radius: 0;
+}
+
+/* ---------------------------------------------------------
+   TABLES
+   --------------------------------------------------------- */
+
+.md-typeset table:not([class]) {
+  border: 1px solid var(--portfolio-border);
+
+  box-shadow: none;
+}
+
+.md-typeset table:not([class]) th {
+  background: #171717;
+  color: #f1efe9;
+
+  font-size: 0.7rem;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.md-typeset table:not([class]) td {
+  border-top: 1px solid var(--portfolio-border);
+}
+
+/* ---------------------------------------------------------
+   HORIZONTAL RULES
+   --------------------------------------------------------- */
+
+.md-typeset hr {
+  border-bottom: 1px solid var(--portfolio-border);
+}
+
+/* ---------------------------------------------------------
+   SEARCH
+   --------------------------------------------------------- */
+
+.md-search__form {
+  border-radius: 0;
+
+  background: #e4e0d7;
+}
+
+.md-search__input {
+  color: var(--portfolio-text);
+}
+
+/* ---------------------------------------------------------
+   FOOTER
+   --------------------------------------------------------- */
+
+.md-footer {
+  background: #171717;
+  color: #f1efe9;
+}
+
+.md-footer-meta {
+  background: #171717;
+}
+
+/* ---------------------------------------------------------
+   SCROLLBARS / ACCENTS
+   --------------------------------------------------------- */
+
+.md-typeset ::selection {
+  background: #d9d5cb;
+  color: #171717;
+}
+
+/* ---------------------------------------------------------
+   DOCUMENTATION SCREENSHOTS
+   --------------------------------------------------------- */
+
+.doc-screenshot {
+  display: block;
+
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+
+  margin: 2rem auto;
+
+  border: 1px solid var(--portfolio-border);
+  border-radius: 6px;
+
+  background: #171717;
+}
+
+@media screen and (max-width: 600px) {
+  .doc-screenshot {
+    margin: 1.5rem auto;
+  }
+}
+
+/* ---------------------------------------------------------
+   SCREENSHOT CAPTIONS
+   --------------------------------------------------------- */
+
+.doc-caption {
+  max-width: 900px;
+
+  margin: -1.25rem auto 2.25rem;
+
+  color: var(--portfolio-muted);
+
+  font-size: 0.82rem;
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+/* ---------------------------------------------------------
+   MOBILE
+   --------------------------------------------------------- */
+
+@media screen and (max-width: 76.234375em) {
+  .md-nav--primary .md-nav__title {
+    background: #171717;
+    color: #f1efe9;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .md-typeset h1 {
+    font-size: 2.8rem;
+  }
+
+  .md-typeset h2 {
+    font-size: 1.75rem;
+  }
+
+  .md-typeset {
+    font-size: 0.86rem;
+  }
+}
